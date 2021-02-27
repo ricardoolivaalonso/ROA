@@ -1,0 +1,26 @@
+.banner{
+    &__info{
+        @include flex(inline-flex, flex-end, flex-start, column, wrap);
+        height: 100%;
+
+        @media(max-width: $mq-5 ){ justify-content: center;}
+    }
+        &__title{
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: $gray;
+        }
+        &__subtitle{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 60px;
+            font-weight: 400;
+            letter-spacing: -2.5px;
+
+            @media(max-width: $mq-2){ font-size: 56px;}
+            @media(max-width: $mq-3){ font-size: 48px;}
+            @media(max-width: $mq-4){ font-size: 42px;}
+        }
+}

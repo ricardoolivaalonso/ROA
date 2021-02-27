@@ -1,0 +1,11 @@
+.is-cursor-enter{
+    width: 40px;
+    height: 40px;
+    transition:
+        transform 200ms cubic-bezier(.36,.59,.77,.97),
+        background-color 200ms cubic-bezier(.36,.59,.77,.97),
+        width 200ms cubic-bezier(.36,.59,.77,.97),
+        height 200ms cubic-bezier(.36,.59,.77,.97),
+    ;
+    background-color: cyan;
+}

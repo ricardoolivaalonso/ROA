@@ -1,0 +1,32 @@
+@mixin flex($display, $justify, $align, $direction, $wrap) {
+	display: $display;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+}
+//--------------------------
+/*
+@font-face {
+    font-family: 'CT';
+    src: url('../fonts/Canela.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@mixin title(){
+	font-family: 'CT', serif;
+	font-size: 56px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba($white, .95);
+
+	@media(max-width: $mq-1){ font-size: 48px;}
+	@media(max-width: $mq-2){ font-size: 36px;}
+	@media(max-width: $mq-3){ font-size: 32px;}
+	@media(max-width: $mq-4){ font-size: 48px; }
+	@media(max-width: $mq-5){ font-size: 36px; }
+}
+*/

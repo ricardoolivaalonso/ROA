@@ -1,0 +1,21 @@
+//----------- Colorrs ---------------
+$white: #f9f9f9;
+$black: #232323;
+$purple: #3625d3;
+$gray: #7c7c7c;
+//----------- Queries ---------------
+$mq-1: 1400px;
+$mq-2: 1050px;
+$mq-3: 860px;
+$mq-4: 780px;
+$mq-5: 500px;
+$max-width: 1600px;
+
+:root{
+    --gap: 40px;
+    @media(max-width: $mq-3 ){ --gap: 30px; }
+    @media(max-width: $mq-4 ){ --gap: 25px; }
+    @media(max-width: $mq-5 ){ --gap: 20px; }
+}
+//---------- Transition ----------------
+$transition: 2000ms cubic-bezier(.31,.55,.21,.94);

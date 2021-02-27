@@ -1,0 +1,8 @@
+.header{
+    &__link{
+        display: inline-flex;
+        margin-left: calc(var(--gap) / 2);
+        line-height: 1.7;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: $black;
+    background-color: $white;
+
+    cursor: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    @media(max-width: $mq-5 ){ cursor: pointer; }
+}
+ul{ list-style: none; }
+a{
+    text-decoration: none;
+    transition: .5s;
+    opacity: .95;
+    cursor: none;
+    color: $black;
+
+    &:hover{ transition: .5s; opacity: 1;}
+
+    @media(max-width: $mq-5 ){ cursor: pointer; }
+}

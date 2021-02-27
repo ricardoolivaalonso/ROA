@@ -1,0 +1,67 @@
+.cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+
+    z-index: 100;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    will-change: transform;
+    transition:
+        transform 200ms cubic-bezier(.36,.59,.77,.97),
+        background-color 200ms cubic-bezier(.36,.59,.77,.97),
+        width 200ms cubic-bezier(.36,.59,.77,.97),
+        height 200ms cubic-bezier(.36,.59,.77,.97),
+    ;
+    border-radius: 50%;
+    background-color: $black;
+
+    @media(max-width: $mq-5 ){ display: none; }
+}
+.container{
+    width: 100%;
+    max-width: $max-width;
+    overflow: hidden;
+}
+.header{
+    @include flex(flex, space-between, center, row, nowrap);
+    width: 100%;
+    position: absolute;
+
+    padding: var(--gap) calc(var(--gap) * 2.5);
+    @media(max-width: $mq-1 ){ padding: var(--gap) calc(var(--gap) * 2); }
+    @media(max-width: $mq-2 ){ padding: var(--gap);}
+}
+.banner{
+    @include flex(flex, flex-start, flex-end, row, nowrap);
+    width: 100%;
+    min-height: 500px;
+
+    padding: var(--gap) calc(var(--gap) * 2.5) ;
+    @media(max-width: $mq-1 ){ padding: var(--gap) calc(var(--gap) * 2); }
+    @media(max-width: $mq-2 ){ padding: var(--gap); }
+    @media(max-width: $mq-5){
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}
+.portfolio{
+    width: 100%;
+    padding: var(--gap) calc(var(--gap) * 2.5);
+    @media(max-width: $mq-1 ){ padding: var(--gap) calc(var(--gap) * 2); }
+    @media(max-width: $mq-2 ){ padding: var(--gap);}
+    @media(max-width: $mq-5 ){ padding: 0;}
+
+}
+.footer{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+    padding: var(--gap) calc(var(--gap) * 2.5) 100px;
+    @media(max-width: $mq-1 ){ padding: var(--gap) calc(var(--gap) * 2) 100px; }
+    @media(max-width: $mq-2 ){ padding: var(--gap) var(--gap) 100px; }
+}
