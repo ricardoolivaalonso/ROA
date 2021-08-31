@@ -9,7 +9,7 @@
         //------------------
         &__item{
             @include flex(flex, flex-start, flex-start, row, nowrap);
-            height: 500px;
+            min-height: 400px;
             position: relative;
         }
             &__left{
@@ -27,18 +27,32 @@
                     left: var(--gap);
                     z-index: 1;
 
-                    font-size: 20px;
+                    font-size: 1.25rem; //20px
+                    letter-spacing: .0625rem; //1px
                     font-weight: 100;
                     color: $white;
                 }
-                &__bg,
-                &__img{
+                &__bg{
                     position: relative;
                     width: 100%;
-                    height: 110%;
+                    height: 100%;
                     overflow: hidden;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        padding-top: percentage(1/1);
+                    }
                 }
-                &__img{ object-fit: cover; }
+                &__img{ 
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 110%;
+                    display: block;
+                    object-fit: cover;  
+                }
         //------------------
         &__right{
             @include flex(flex, center, center, row, nowrap);
@@ -58,10 +72,10 @@
             }
                 &__current{
                     width: 100%;
-                    margin-bottom: 30px;
-                    font-size: 15px;
+                    margin-bottom: 1.875rem; //30px
+                    font-size: 1rem; //16px
                     font-weight: 400;
-                    letter-spacing: 1.5px;
+                    letter-spacing: .09375rem; //1.5px
                     line-height: 1.25;
 
                     text-transform: uppercase;
@@ -69,24 +83,24 @@
                     color: $white;
                 }
                 &__description{
-                    font-size: 15px;
+                    font-size: .923125rem; //14.76px
                     font-weight: 400;
-                    line-height: 1.7;
+                    line-height: 1.75;
                     color: $white;
                 }
                 &__sources{
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
-                    margin-top: 22px;
+                    margin-top: 1.375rem; //22px
                     position: relative;
                 }
                     &__source{
                         font-family: 'Lora', serif;
-                        font-size: 15px;
+                        font-size: .923125rem; //14.76px
                         font-weight: 400;
                         line-height: 2;
-                        letter-spacing: .5px;
+                        letter-spacing: .0625rem; //1px
                         color: $white;
                     }
         //------------------
@@ -100,15 +114,27 @@
             @media(max-width: $mq-5){ grid-template-columns: repeat(2, 1fr); grid-gap: 0; }
 
             &-item{
-                width: 100%;
-                height: 100%;
                 position: relative;
-            }
-            &-source,
-            &-img{
                 width: 100%;
                 height: 100%;
-                aspect-ratio: 1/1;
+                overflow: hidden;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    padding-top: percentage(1/1);
+                }
+            }
+           
+            &-img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover; 
+                
             }
         }
 }

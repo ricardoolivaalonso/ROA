@@ -6,21 +6,21 @@
         @media(max-width: $mq-5 ){ justify-content: center;}
     }
         &__title{
-            margin-bottom: 10px;
-            font-size: 14px;
+            font-size: .875rem; //14px
+            letter-spacing: .09365rem; //1.5px
+            line-height: 1.75;
             font-weight: 400;
-            letter-spacing: 1.5px;
+
             text-transform: uppercase;
             color: $gray;
         }
         &__subtitle{
             font-family: 'Cormorant Garamond', serif;
-            font-size: 60px;
+            font-size: 3.815rem; //61.94px
+            letter-spacing: -.15625rem; //2.5px
             font-weight: 400;
-            letter-spacing: -2.5px;
 
-            @media(max-width: $mq-2){ font-size: 56px;}
-            @media(max-width: $mq-3){ font-size: 48px;}
-            @media(max-width: $mq-4){ font-size: 42px;}
+            @media(max-width: $mq-3){ font-size: 3.053rem; } //48.83px
+            @media(max-width: $mq-4){ font-size: 2.441rem; } //39.06px
         }
 }

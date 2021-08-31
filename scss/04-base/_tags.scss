@@ -2,6 +2,8 @@ body{
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: $black;
     background-color: $white;
@@ -15,12 +17,12 @@ body{
 ul{ list-style: none; }
 a{
     text-decoration: none;
-    transition: .5s;
+    transition: 500ms;
     opacity: .95;
     cursor: none;
     color: $black;
 
-    &:hover{ transition: .5s; opacity: 1;}
+    &:hover{ transition: 500ms; opacity: 1;}
 
     @media(max-width: $mq-5 ){ cursor: pointer; }
 }
